@@ -17,6 +17,7 @@ out/
 
 # Gradle
 .gradle
+/.idea
 /.idea/workspace.xml
 /.idea/libraries/*
 build
