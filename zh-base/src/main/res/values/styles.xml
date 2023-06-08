@@ -1,0 +1,9 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+
+    <style name="textCheckBoxTheme" parent="Theme.AppCompat.Light">
+       <!-- <item name="android:button">@drawable/question_text_selector</item>-->
+        <item name="colorControlNormal">#ffffff</item>
+        <item name="colorControlActivated">#F7F13D</item>
+    </style>
+</resources>

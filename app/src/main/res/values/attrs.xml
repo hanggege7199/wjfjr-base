@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="DetailsSelectStatus">
+        <attr name="SelectTypeMode">
+            <enum name="Image" value="1"/>
+            <enum name="Button" value="2"/>
+        </attr>
+    </declare-styleable>
+</resources>

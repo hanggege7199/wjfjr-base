@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/wjfjr_base.iml" filepath="$PROJECT_DIR$/.idea/modules/wjfjr_base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/wjfjr_base.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/wjfjr_base.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/zh-base/wjfjr_base.zh-base.iml" filepath="$PROJECT_DIR$/.idea/modules/zh-base/wjfjr_base.zh-base.iml" />
+    </modules>
+  </component>
+</project>
