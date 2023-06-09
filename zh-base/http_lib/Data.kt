@@ -1,11 +1,9 @@
 package com.tope.http_lib
 
 class Data<T> {
-
     var data: T? = null
     var code = 0
     var message: String? = null
-
     constructor() {
 
     }
