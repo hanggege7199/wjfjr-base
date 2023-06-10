@@ -30,7 +30,7 @@ public class DataSecurityAdapter implements JsonDeserializer<Data<?>> {
             }
             String message = object.get("message").getAsString();
             newData.setCode(code);
-            newData.setMessage(message);
+            newData.setMsg(message);
             LogUtil.d("DataSecurityAdapter", "newData" + newData);
 
             return newData;

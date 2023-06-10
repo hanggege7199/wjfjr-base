@@ -4,19 +4,19 @@ class Data<T> {
 
     var data: T? = null
     var code = 0
-    var message: String? = null
+    var msg: String? = null
 
     constructor() {
 
     }
 
-    constructor(code: Int, message: String) {
+    constructor(code: Int, msg: String) {
         this.code = code;
-        this.message = message;
+        this.msg = msg;
     }
 
     override fun toString(): String {
-        return "Data(date=$data, code=$code, message=$message)"
+        return "Data(date=$data, code=$code, message=$msg)"
     }
 
 }

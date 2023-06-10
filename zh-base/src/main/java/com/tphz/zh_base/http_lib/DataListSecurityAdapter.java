@@ -30,7 +30,7 @@ public class DataListSecurityAdapter implements JsonDeserializer<DataList<?>> {
             }
             String message = object.get("message").getAsString();
             newData.setCode(code);
-            newData.setMessage(message);
+            newData.setMsg(message);
             LogUtil.d("DataSecurityAdapter", "newDataList" + newData);
 
             return newData;

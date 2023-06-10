@@ -17,6 +17,7 @@ out/
 
 # Gradle
 .gradle
+.idea
 /.idea
 /.idea/workspace.xml
 /.idea/libraries/*
@@ -47,6 +48,6 @@ tmp
 .DS_Store
 fabric.properties
 keystore
-
+echo 'idea'>>.gitignore
 
 app/src/main/res/values/com_crashlytics_export_strings.xml

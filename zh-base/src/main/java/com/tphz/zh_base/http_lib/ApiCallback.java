@@ -22,15 +22,15 @@ public abstract class ApiCallback<T> implements Callback<T> {
                     if (((Data<?>) response.body()).getCode() == 0) {
                         onSuccess((T) response.body());
                     } else {
-                        HLog.error(new ApiCallbackException("message: " + ((Data<?>) response.body()).getMessage()));
-                        onFailure(((Data<?>) response.body()).getMessage() + "");
+                        HLog.error(new ApiCallbackException("message: " + ((Data<?>) response.body()).getMsg()));
+                        onFailure(((Data<?>) response.body()).getMsg() + "");
                     }
                 } else if (response.body() instanceof DataList<?>) {
                     if (((DataList<?>) response.body()).getCode() == 0) {
                         onSuccess((T) response.body());
                     } else {
-                        HLog.error(new ApiCallbackException("message: " + ((DataList<?>) response.body()).getMessage()));
-                        onFailure(((DataList<?>) response.body()).getMessage());
+                        HLog.error(new ApiCallbackException("message: " + ((DataList<?>) response.body()).getMsg()));
+                        onFailure(((DataList<?>) response.body()).getMsg());
                     }
                 } else {
                     HLog.error(new ApiCallbackException("(code:8023) " + response.body()));
