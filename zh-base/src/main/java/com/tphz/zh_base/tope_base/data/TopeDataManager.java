@@ -14,7 +14,7 @@ import java.util.concurrent.Executors;
 
 public class TopeDataManager {
     private static TopeDataManager topeSettingManager;
-    private Uri settingUri = Uri.parse("content://com.lhkj.caique.appcontentprovider/setting");
+    private Uri settingUri = Uri.parse("content://com.lhkj.finches.appcontentprovider/setting");
     private Context context;
 
     public TopeDataManager(Context context) {
