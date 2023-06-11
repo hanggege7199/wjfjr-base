@@ -11,7 +11,7 @@ android {
         dataBinding = true
     }
     defaultConfig {
-        applicationId "com.tphz.painter"
+        applicationId "com.tphz.painter1"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1

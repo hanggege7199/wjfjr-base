@@ -38,7 +38,6 @@ public class TopeApplication extends Application {
         Constants.init(getApplicationContext());
         HandlerTasks.initInstance();
         initCndKey();
-        initLifecycle(isDebug);
         initLog(isDebug);
         LogUtil.imp(LogUtil.defaultTree);
 //        initBugly(isDebug, buglyKey);
@@ -48,53 +47,6 @@ public class TopeApplication extends Application {
 
     private void initCndKey() {
         CdnDomain.getKeys();
-    }
-
-    private void initLifecycle(boolean isDebug) {
-        if (isDebug) {
-            TopeAnalysisClient.setBaseUrl("https://gateway-test.izhh.com.cn/growthsecret/");
-        } else {
-            TopeAnalysisClient.setBaseUrl("https://gateway.izhh.com.cn/growthsecret/");
-        }
-        registerActivityLifecycleCallbacks(new ActivityLifecycleCallbacks() {
-            @Override
-            public void onActivityCreated(@NonNull Activity activity, @Nullable Bundle savedInstanceState) {
-            }
-
-            @Override
-            public void onActivityStarted(@NonNull Activity activity) {
-
-            }
-
-            @Override
-            public void onActivityResumed(@NonNull Activity activity) {
-                uuid = UUID.randomUUID().toString();
-                LogUtil.d("TopeApplication", "onActivityResumed:" + activity.getClass().getName());
-                TopeAnalysis.saveEvent("10001", activity.getClass().getName(), uuid);
-//                TopeAnalysis.saveEvent("10005",     activity.getClass().getName(), uuid);
-            }
-
-            @Override
-            public void onActivityPaused(@NonNull Activity activity) {
-                LogUtil.d("TopeApplication", "onActivityPaused:" + activity.getClass().getName());
-                TopeAnalysis.saveEvent("10002", activity.getClass().getName(), uuid);
-            }
-
-            @Override
-            public void onActivityStopped(@NonNull Activity activity) {
-
-            }
-
-            @Override
-            public void onActivitySaveInstanceState(@NonNull Activity activity, @NonNull Bundle outState) {
-
-            }
-
-            @Override
-            public void onActivityDestroyed(@NonNull Activity activity) {
-
-            }
-        });
     }
 
     private void initUment(boolean isDebug, String umengKey) {
